@@ -51,10 +51,10 @@ For a published HF copy, supply the actual repository ID and its immutable
 commit SHA to the downloader. These are arguments rather than hard-coded URLs:
 
 ```bash
-python tools/download_models.py --repo-id hitsz-robotics/FineCraft --revision HF_COMMIT_SHA --model-dir /path/to/FineCraft-models
+python tools/download_models.py --repo-id hitsz-robotics/FineCraft --revision d59585bb9a5bc97630447528d6fde80ae769607e --model-dir /path/to/FineCraft-models
 ```
 
-Replace `HF_COMMIT_SHA` with the published model revision. The downloader verifies every
+The command pins the published model bundle. The downloader verifies every
 asset against the digests bundled with this code.
 
 ## Run the policy server
