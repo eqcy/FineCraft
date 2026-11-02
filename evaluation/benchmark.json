@@ -1,0 +1,6 @@
+{
+  "repository": "https://github.com/Hiangx-robotics/MetaFine-Challenge_CoRL",
+  "revision": "232538592ef4c85c0fdd37f1fccf8d868ee150aa",
+  "local_patch": "remote_policy_constants.patch",
+  "patch_effect": "Use the same image/state key strings without importing LeRobot constants; no scoring changes."
+}

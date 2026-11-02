@@ -1,0 +1,31 @@
+diff --git a/utils/eval_common.py b/utils/eval_common.py
+index b02308d..44dea27 100644
+--- a/utils/eval_common.py
++++ b/utils/eval_common.py
+@@ -25,6 +25,8 @@ import torch
+ import yaml
+ 
+ REPO_ROOT = Path(__file__).resolve().parent.parent
++OBS_IMAGES = "observation.images"
++OBS_STATE = "observation.state"
+ 
+ 
+ # --------------------------------------------------------------------------- #
+@@ -268,8 +270,6 @@ def build_pi0_batch(state: Any, images: dict, task: str) -> dict:
+     policy-server path (``submission/pi0_policy_server.py``) construct byte
+     identical batches.
+     """
+-    from lerobot.utils.constants import OBS_IMAGES, OBS_STATE
+-
+     if isinstance(state, torch.Tensor):
+         state = state.detach().cpu()
+     state_t = torch.as_tensor(np.asarray(state, dtype=np.float32))
+@@ -350,8 +350,6 @@ class RemotePolicy:
+     @staticmethod
+     def _split_batch(batch: dict) -> tuple[np.ndarray, dict, str]:
+         """Undo :func:`build_pi0_batch` back to wire types (uint8 HWC images)."""
+-        from lerobot.utils.constants import OBS_IMAGES, OBS_STATE
+-
+         state = batch[OBS_STATE]
+         if isinstance(state, torch.Tensor):
+             state = state.detach().cpu().numpy()

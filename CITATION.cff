@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Please cite the FineCraft technical report when using this release."
+type: software
+title: "FineCraft: Enhancing VLA Models for Fine-Grained Manipulation"
+repository-code: "https://github.com/eqcy/FineCraft"
+authors:
+  - family-names: Zhang
+    given-names: Shuaike
+  - family-names: Quan
+    given-names: Ziheng
+  - family-names: Ran
+    given-names: Junhao
+  - family-names: Ding
+    given-names: Muhe
+  - family-names: Wang
+    given-names: Shaokun
+  - family-names: Wu
+    given-names: Jianlong

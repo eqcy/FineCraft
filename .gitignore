@@ -1,0 +1,12 @@
+weights/
+.venv/
+__pycache__/
+*.pyc
+*.pt
+*.pth
+*.safetensors
+*.onnx
+*.model
+.env
+.cache/
+results/

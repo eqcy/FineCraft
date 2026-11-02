@@ -1,0 +1,44 @@
+{
+  "model": {
+    "pi05": true,
+    "action_horizon": 10,
+    "paligemma_variant": "gemma_2b_lora",
+    "action_expert_variant": "gemma_300m_lora"
+  },
+  "replan_interval": 10,
+  "tasks": {
+    "grasp_part": {
+      "backend": "t1_best",
+      "checkpoint": "t1_best",
+      "device": "auto"
+    },
+    "grasp_move_mug": {
+      "checkpoint": "checkpoints/grasp_move_mug/29999",
+      "asset_id": "metafine_grasp_move_mug_mixed",
+      "config_name": "pi05_metafine_grasp_move_mug_lora"
+    },
+    "toggle_switch_table": {
+      "checkpoint": "checkpoints/toggle_switch_table/coverage3000_20261019",
+      "asset_id": "metafine_toggle_switch_table_mixed",
+      "config_name": "pi05_metafine_toggle_switch_table_lora",
+      "replan_interval": 5
+    },
+    "put_blocks_into_boxes": {
+      "checkpoint": "checkpoints/put_blocks_into_boxes/29999",
+      "asset_id": "metafine_put_blocks_into_boxes_mixed",
+      "config_name": "pi05_metafine_put_blocks_into_boxes_lora"
+    },
+    "insert_letter": {
+      "backend": "t5_combo",
+      "vision_path": "models/t5_combo/dinov2-large",
+      "checkpoint": "checkpoints/insert_letter/combo_20261019/M0_0012000.pt",
+      "terminal": "checkpoints/insert_letter/combo_20261019/endgame_70p28.pt",
+      "branch": "checkpoints/insert_letter/combo_20261019/repair_C_74p17.pt",
+      "gate": "checkpoints/insert_letter/combo_20261019/gate.pt",
+      "protection": "checkpoints/insert_letter/combo_20261019/protection.pt",
+      "legacy_branch": "checkpoints/insert_letter/combo_20261019/repair_L_71p11.pt",
+      "o_branch": "checkpoints/insert_letter/combo_20261019/repair_o_73p75.pt",
+      "device": "auto"
+    }
+  }
+}

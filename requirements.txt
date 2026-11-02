@@ -1,0 +1,31 @@
+# Policy runtime: Python 3.10/3.11, NVIDIA GPU with a CUDA 12 compatible driver.
+# OpenPI source and openpi_client are bundled in vendor/.
+# T5 uses the evaluated DINOv2-L + DiT runtime versions below.
+-c constraints.txt
+jax[cuda12]==0.5.3
+flax==0.10.2
+orbax-checkpoint==0.11.13
+tensorstore==0.1.74
+ml-dtypes==0.4.1
+numpy==1.26.4
+torch==2.7.1
+transformers==4.57.3
+sentencepiece==0.2.0
+huggingface-hub==0.36.0
+numpydantic==1.6.9
+augmax==0.4.1
+einops==0.8.1
+safetensors==0.7.0
+beartype==0.19.0
+jaxtyping==0.2.36
+optax==0.2.4
+chex==0.1.90
+pillow==11.3.0
+fsspec==2025.3.0
+tqdm-loggable==0.2
+typing-extensions==4.13.2
+filelock==3.18.0
+scipy==1.15.3
+opencv-python-headless==4.11.0.86
+diffusers==0.33.1
+torchvision==0.22.1
