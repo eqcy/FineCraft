@@ -6,7 +6,7 @@ Inference code for the final HITSZ Robotics entry in the MetaFine Challenge.
 The entry placed **4th**, with an overall official score of **0.878**.
 This release contains the five policies used for the final leaderboard results.
 
-[Code](https://github.com/eqcy/FineCraft) · [Model weights](https://huggingface.co/hitsz-robotics/FineCraft)
+[Paper](https://arxiv.org/abs/2611.03163) · [PDF](https://arxiv.org/pdf/2611.03163) · [Code](https://github.com/eqcy/FineCraft) · [Model weights](https://huggingface.co/hitsz-robotics/FineCraft)
 
 | Task | Released policy | Scored HF revision | Official score* |
 | --- | --- | --- | ---: |
@@ -78,10 +78,28 @@ Use the pinned public challenge evaluator through its HTTP policy interface.
 See [evaluation instructions](docs/EVALUATION.md). The supplied launcher connects
 the evaluator to this policy server without copying the simulator into this repo.
 
-## Citation and licenses
+## Citation
 
-Authors: Shuaike Zhang, Ziheng Quan, Junhao Ran, Muhe Ding, Shaokun Wang,
-and Jianlong Wu. See `CITATION.cff` for the report title and author order.
+If you use FineCraft in your research, please cite our technical report:
+
+**[FineCraft: Enhancing VLA Models for Fine-Grained Manipulation](https://arxiv.org/abs/2611.03163)** (arXiv:2611.03163, 2026).
+
+```bibtex
+@misc{zhang2026finecraft,
+  title         = {{FineCraft}: Enhancing {VLA} Models for Fine-Grained Manipulation},
+  author        = {Shuaike Zhang and Ziheng Quan and Junhao Ran and
+                   Muhe Ding and Shaokun Wang and Jianlong Wu},
+  year          = {2026},
+  eprint        = {2611.03163},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2611.03163}
+}
+```
+
+Citation metadata: [BibTeX](CITATION.bib) · [CITATION.cff](CITATION.cff).
+
+## Licenses
 
 The original MIT notice is retained for the MetaFine source components.
 OpenPI, DINOv2 and Diffusion Policy notices are retained alongside their
